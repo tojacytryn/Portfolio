@@ -34,7 +34,7 @@ A modern, responsive portfolio website showcasing my skills as a young developer
 
 4. **Open your browser**
     ```
-    Open [http://localhost:5173](http://localhost:5173) to view the app.
+    Open http://localhost:5173 to view the app.
     ```
 
 ## 📁 Project Structure
