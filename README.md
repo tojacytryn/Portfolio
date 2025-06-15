@@ -1,12 +1,62 @@
-# React + Vite
+# 🍋 My Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website showcasing my skills as a young developer from Poland. Built with React, Vite, and Tailwind CSS, featuring smooth animations, beautiful gradients, and a professional design.
 
-Currently, two official plugins are available:
+![Portfolio Preview](https://i.imgur.com/yfzJShq.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## Expanding the ESLint configuration
+[View Live Portfolio](https://cytryn.ovh)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Built With
+
+- **React 19** - Modern JavaScript library for building user interfaces
+- **Vite** - Next generation frontend tooling for fast development
+- **Tailwind CSS** - Utility-first CSS framework for rapid UI development
+
+## 🔧 Installation & Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/Portfolio.git
+   cd Portfolio
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**
+   Navigate to `http://localhost:5173` to view the portfolio
+
+## 📁 Project Structure
+
+```
+Portfolio/
+├── public/
+│   └── lemon_slice.png          # Logo/favicon
+├── src/
+│   ├── components/
+│   │   ├── About.jsx            # About section
+│   │   ├── Contact.jsx          # Contact form
+│   │   ├── Footer.jsx           # Footer component
+│   │   ├── Hero.jsx             # Hero section
+│   │   ├── Navbar.jsx           # Navigation bar
+│   │   └── Projects.jsx         # Projects showcase
+│   ├── icons/                   # Icon assets
+│   ├── App.jsx                  # Main app component
+│   ├── index.css                # Global styles
+│   └── main.jsx                 # App entry point
+├── package.json
+├── tailwind.config.js           # Tailwind configuration
+├── vite.config.js              # Vite configuration
+└── README.md
+```
+
+*Made with ❤️*
