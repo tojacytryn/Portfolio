@@ -1,17 +1,19 @@
 const About = () => {
     const technologies = [
-        { name: 'HTML', link: 'https://skillicons.dev/icons?i=html', },
-        { name: 'CSS', link: 'https://skillicons.dev/icons?i=css', },
-        { name: 'JavaScript', link: 'https://skillicons.dev/icons?i=javascript', },
-        { name: 'Node.js', link: 'https://skillicons.dev/icons?i=nodejs', },
-        { name: 'MySQL', link: 'https://skillicons.dev/icons?i=mysql', },
-        { name: 'Python', link: 'https://skillicons.dev/icons?i=python', },
-        { name: 'PHP', link: 'https://skillicons.dev/icons?i=php', },
-        { name: 'C++', link: 'https://skillicons.dev/icons?i=cpp', },
-        { name: 'Git', link: 'https://skillicons.dev/icons?i=git', },
-        { name: 'GitHub', link: 'https://skillicons.dev/icons?i=github', },
-        { name: 'VS Code', link: 'https://skillicons.dev/icons?i=vscode', },
-        { name: 'Figma', link: 'https://skillicons.dev/icons?i=figma', }
+        { name: 'HTML', img: 'https://skillicons.dev/icons?i=html', },
+        { name: 'CSS', img: 'https://skillicons.dev/icons?i=css', },
+        { name: 'Tailwind', img: 'https://skillicons.dev/icons?i=tailwindcss', },
+        { name: 'JavaScript', img: 'https://skillicons.dev/icons?i=javascript', },
+        { name: 'Node.js', img: 'https://skillicons.dev/icons?i=nodejs', },
+        { name: 'React', img: 'https://skillicons.dev/icons?i=react', },
+        { name: 'SQL', img: 'https://skillicons.dev/icons?i=mysql', },
+        { name: 'Python', img: 'https://skillicons.dev/icons?i=python', },
+        { name: 'PHP', img: 'https://skillicons.dev/icons?i=php', },
+        { name: 'C++', img: 'https://skillicons.dev/icons?i=cpp', },
+        { name: 'Git', img: 'https://skillicons.dev/icons?i=git', },
+        { name: 'GitHub', img: 'https://skillicons.dev/icons?i=github', },
+        { name: 'VS Code', img: 'https://skillicons.dev/icons?i=vscode', },
+        { name: 'Figma', img: 'https://skillicons.dev/icons?i=figma', }
     ];
 
     return (
@@ -41,7 +43,7 @@ const About = () => {
                                 Technologies & Tools
                             </h3>
 
-                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-6 gap-6">
+                            <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-6">
                                 {technologies.map((tech, index) => (
                                     <div
                                         key={tech.name}
@@ -49,7 +51,7 @@ const About = () => {
                                         style={{ animationDelay: `${index * 0.1}s` }}
                                     >
                                         <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">
-                                            <img src={tech.link} alt={tech.name} className="w-16 h-16 mx-auto" />
+                                            <img src={tech.img} alt={tech.name} className="w-16 h-16 mx-auto" />
                                         </div>
                                         <h4 className="">
                                             {tech.name}
