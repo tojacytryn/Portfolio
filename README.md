@@ -33,7 +33,9 @@ A modern, responsive portfolio website showcasing my skills as a young developer
    ```
 
 4. **Open your browser**
-   Navigate to `http://localhost:5173` to view the portfolio
+    ```
+    Open [http://localhost:5173](http://localhost:5173) to view the app.
+    ```
 
 ## 📁 Project Structure
 
@@ -59,4 +61,4 @@ Portfolio/
 └── README.md
 ```
 
-*Made with ❤️*
+*Readme generated with GitHub Copilot 🤖*
