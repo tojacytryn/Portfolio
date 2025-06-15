@@ -13,15 +13,15 @@ const Projects = () => {
             id: 2,
             title: 'TwitchTTS "Iᴠᴏɴᴋᴀ"',
             description: 'A website that reads messages from Twitch chat with text-to-speech. Users can mute specific users and map their nicknames for better management.',
-            image: 'https://i.imgur.com/fGh1We9.png',
+            image: 'https://i.imgur.com/FIx1vu8.png',
             technologies: ['HTML', 'CSS', 'JavaScript', 'PHP'],
-            demoUrl: 'https://cytryn.ovh/tasior/ivonka/',
-            codeUrl: 'https://cytryn.ovh/tasior/ivonka/'
+            demoUrl: 'https://cytryn.ovh/ivonka/',
+            codeUrl: 'https://cytryn.ovh/ivonka/'
         },
         {
             id: 3,
             title: 'Snake Game',
-            description: 'A classic Snake game implemented in C++ using Raylib.',
+            description: 'A classic snake game implemented in C++ using Raylib.',
             image: 'https://i.imgur.com/fGh1We9.png',
             technologies: ['C++', 'Raylib'],
             demoUrl: 'https://github.com/tojacytryn/CppSnake',
