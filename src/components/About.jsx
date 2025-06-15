@@ -1,19 +1,19 @@
 const About = () => {
     const technologies = [
-        { name: 'HTML', img: 'https://skillicons.dev/icons?i=html', },
-        { name: 'CSS', img: 'https://skillicons.dev/icons?i=css', },
-        { name: 'Tailwind', img: 'https://skillicons.dev/icons?i=tailwindcss', },
-        { name: 'JavaScript', img: 'https://skillicons.dev/icons?i=javascript', },
-        { name: 'Node.js', img: 'https://skillicons.dev/icons?i=nodejs', },
-        { name: 'React', img: 'https://skillicons.dev/icons?i=react', },
-        { name: 'SQL', img: 'https://skillicons.dev/icons?i=mysql', },
-        { name: 'Python', img: 'https://skillicons.dev/icons?i=python', },
-        { name: 'PHP', img: 'https://skillicons.dev/icons?i=php', },
-        { name: 'C++', img: 'https://skillicons.dev/icons?i=cpp', },
-        { name: 'Git', img: 'https://skillicons.dev/icons?i=git', },
-        { name: 'GitHub', img: 'https://skillicons.dev/icons?i=github', },
-        { name: 'VS Code', img: 'https://skillicons.dev/icons?i=vscode', },
-        { name: 'Figma', img: 'https://skillicons.dev/icons?i=figma', }
+        { name: 'HTML', img: 'https://skillicons.dev/icons?i=html' },
+        { name: 'CSS', img: 'https://skillicons.dev/icons?i=css' },
+        { name: 'Tailwind', img: 'https://skillicons.dev/icons?i=tailwindcss' },
+        { name: 'JavaScript', img: 'https://skillicons.dev/icons?i=javascript' },
+        { name: 'React', img: 'https://skillicons.dev/icons?i=react' },
+        { name: 'Node.js', img: 'https://skillicons.dev/icons?i=nodejs' },
+        { name: 'DiscordJS', img: 'https://skillicons.dev/icons?i=discordjs' },
+        { name: 'Python', img: 'https://skillicons.dev/icons?i=python' },
+        { name: 'PHP', img: 'https://skillicons.dev/icons?i=php' },
+        { name: 'SQL', img: 'https://skillicons.dev/icons?i=mysql' },
+        { name: 'Git', img: 'https://skillicons.dev/icons?i=git' },
+        { name: 'GitHub', img: 'https://skillicons.dev/icons?i=github' },
+        { name: 'VS Code', img: 'https://skillicons.dev/icons?i=vscode' },
+        { name: 'Figma', img: 'https://skillicons.dev/icons?i=figma' },
     ];
 
     return (
@@ -43,7 +43,7 @@ const About = () => {
                                 Technologies & Tools
                             </h3>
 
-                            <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-6">
+                            <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6">
                                 {technologies.map((tech, index) => (
                                     <div
                                         key={tech.name}
@@ -63,8 +63,8 @@ const About = () => {
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             <div className="text-center p-6 bg-gradient-to-br from-yellow-400/10 to-yellow-600/10 rounded-xl border border-yellow-400/20">
-                                <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">3+</div>
-                                <div className="text-gray-300">Years of Experience</div>
+                                <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">16</div>
+                                <div className="text-gray-300">Years old</div>
                             </div>
                             <div className="text-center p-6 bg-gradient-to-br from-yellow-400/10 to-yellow-600/10 rounded-xl border border-yellow-400/20">
                                 <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">10+</div>
