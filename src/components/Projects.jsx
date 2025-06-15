@@ -7,7 +7,7 @@ const Projects = () => {
             image: 'https://i.imgur.com/yfzJShq.png',
             technologies: ['React', 'Tailwind CSS', 'JavaScript'],
             demoUrl: '#',
-            codeUrl: '#'
+            codeUrl: 'https://github.com/tojacytryn/Portfolio'
         },
         {
             id: 2,
