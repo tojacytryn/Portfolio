@@ -22,7 +22,7 @@ const Projects = () => {
             id: 3,
             title: 'Flagmask',
             description: 'A lightweight CSS utility library that allows you to mask text and elements with country flags using simple CSS classes.',
-            image: 'https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png',
+            image: 'https://media.istockphoto.com/id/1190901810/vector/flags-of-the-world.jpg?s=612x612&w=0&k=20&c=Kmi90OlDY9BexGE4Hvkqcz1Eg6tD6q9nwiuxLwwcWFY=',
             technologies: ['CSS', 'npm'],
             demoUrl: 'https://github.com/tojacytryn/flagmask',
             codeUrl: 'https://github.com/tojacytryn/flagmask'
