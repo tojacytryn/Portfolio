@@ -26,17 +26,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Falling Lemons Animation */
-.lemon {
-  position: absolute;
-  top: -50px;
-  font-size: 30px;
-  animation: fall linear infinite;
-  color: #fce94f;
-  z-index: -1;
-  pointer-events: none;
-}
-
 @keyframes fall {
   0% {
     transform: translateY(-50px) rotate(0deg);
@@ -76,12 +65,10 @@ body {
   -webkit-background-clip: text;
 }
 
-/* Smooth scroll for anchor links */
 section {
   scroll-margin-top: 80px;
 }
 
-/* Custom utility classes */
 .text-shadow {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }

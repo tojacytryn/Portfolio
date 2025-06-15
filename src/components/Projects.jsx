@@ -20,6 +20,15 @@ const Projects = () => {
         },
         {
             id: 3,
+            title: 'Flagmask',
+            description: 'A lightweight CSS utility library that allows you to mask text and elements with country flags using simple CSS classes.',
+            image: 'https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png',
+            technologies: ['CSS', 'npm'],
+            demoUrl: 'https://github.com/tojacytryn/flagmask',
+            codeUrl: 'https://github.com/tojacytryn/flagmask'
+        },
+        {
+            id: 4,
             title: 'Snake Game',
             description: 'A classic snake game implemented in C++ using Raylib.',
             image: 'https://i.imgur.com/fGh1We9.png',
