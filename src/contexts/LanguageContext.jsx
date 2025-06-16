@@ -85,7 +85,7 @@ const translations = {
         'about.technologies': 'Technologie i narzędzia',
         'about.yearsOld': 'lat',
         'about.projects': 'Projektów',
-        'about.passion': 'Pasja do programowania',
+        'about.passion': 'Pasji do programowania',
 
         // Projects
         'projects.title': 'Moje projekty',
@@ -347,7 +347,7 @@ export const LanguageProvider = ({ children }) => {
     const contextValue = {
         language,        // Current language
         changeLanguage,  // Function to switch languages
-        getTranslation        // Function to translate text
+        getTranslation   // Function to translate text
     };
 
     return (
