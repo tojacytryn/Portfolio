@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const { getTranslation } = useLanguage();
 
     const navItems = [
-        { name: 'Home', id: 'home' },
-        { name: 'About', id: 'about' },
-        { name: 'Projects', id: 'projects' },
-        { name: 'Contact', id: 'contact' }
+        { name: getTranslation('nav.home'), id: 'home' },
+        { name: getTranslation('nav.about'), id: 'about' },
+        { name: getTranslation('nav.projects'), id: 'projects' },
+        { name: getTranslation('nav.contact'), id: 'contact' }
     ];
 
     return (
@@ -60,15 +62,13 @@ const Navbar = () => {
             {isOpen && (
                 <div className="md:hidden bg-[#001524] bg-opacity-95 backdrop-blur-sm">
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                        {[
-                            { name: 'Home', id: 'home' },
-                            { name: 'About', id: 'about' },
-                            { name: 'Projects', id: 'projects' },
-                            { name: 'Contact', id: 'contact' }
-                        ].map((item) => (
+                        {navItems.map((item) => (
                             <button
                                 key={item.id}
-                                onClick={() => scrollToSection(item.id)}
+                                onClick={() => {
+                                    document.getElementById(item.id).scrollIntoView({ behavior: 'smooth' });
+                                    setIsOpen(false);
+                                }}
                                 className="text-white hover:text-yellow-400 block px-3 py-2 text-base font-medium w-full text-left transition-colors duration-300"
                             >
                                 {item.name}

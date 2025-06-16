@@ -1,4 +1,8 @@
+import { useLanguage } from "../contexts/LanguageContext";
+
 const Contact = () => {
+    const { getTranslation } = useLanguage();
+
     return (
         <section id="contact" className="py-20 bg-[#00152480] backdrop-blur-md relative overflow-hidden">
             <div className="absolute inset-0 opacity-5">
@@ -9,19 +13,17 @@ const Contact = () => {
             <div className="container mx-auto px-4 relative z-10">
                 <div className="max-w-6xl mx-auto">
                     <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-                        <span className="text-yellow-400">Contact</span> <span className="text-white">Me</span>
+                        <span className="text-yellow-400">{getTranslation('contact.title')}</span> {getTranslation('contact.connector')} <span className="text-white">{getTranslation('contact.title2')}</span>
                     </h2>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                         <div className="space-y-8">
                             <div className="text-center lg:text-left">
                                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                                    Let's Work Together
+                                    {getTranslation('contact.getInTouch')}
                                 </h3>
                                 <p className="text-gray-300 text-lg leading-relaxed">
-                                    I'm always excited to work on new projects and collaborate with amazing people.
-                                    Whether you have a project in mind, want to discuss opportunities, or just want
-                                    to say hello, feel free to reach out!
+                                    {getTranslation('contact.description')}
                                 </p>
                             </div>
 
@@ -48,8 +50,8 @@ const Contact = () => {
                                         </svg>
                                     </div>
                                     <div>
-                                        <p className="text-white font-medium">Location</p>
-                                        <p className="text-yellow-400">Poland</p>
+                                        <p className="text-white font-medium">{getTranslation('contact.location')}</p>
+                                        <p className="text-yellow-400">{getTranslation('contact.locationValue')}</p>
                                     </div>
                                 </div>
 
@@ -91,7 +93,7 @@ const Contact = () => {
                             <form action="https://formspree.io/f/xovebegj" method="POST" className="space-y-6">
                                 <div>
                                     <label for="name" className="block text-white text-sm font-medium mb-2">
-                                        Name *
+                                        {getTranslation('contact.name')} *
                                     </label>
                                     <input
                                         type="text"
@@ -99,12 +101,12 @@ const Contact = () => {
                                         name="name"
                                         required
                                         className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition-colors duration-300"
-                                        placeholder="Oliver Smith"
+                                        placeholder={getTranslation('contact.namePlaceholder')}
                                     />
                                 </div>
                                 <div>
                                     <label for="email" className="block text-white text-sm font-medium mb-2">
-                                        Email *
+                                        {getTranslation('contact.email')} *
                                     </label>
                                     <input
                                         type="email"
@@ -112,12 +114,12 @@ const Contact = () => {
                                         name="email"
                                         required
                                         className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition-colors duration-300"
-                                        placeholder="oliver@example.com"
+                                        placeholder={getTranslation('contact.emailPlaceholder')}
                                     />
                                 </div>
                                 <div>
                                     <label for="message" className="block text-white text-sm font-medium mb-2">
-                                        Message *
+                                        {getTranslation('contact.message')} *
                                     </label>
                                     <textarea
                                         id="message"
@@ -125,7 +127,7 @@ const Contact = () => {
                                         required
                                         rows="5"
                                         className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition-colors duration-300 resize-vertical"
-                                        placeholder="Tell me about your project or just say hello!"
+                                        placeholder={getTranslation('contact.messagePlaceholder')}
                                     />
                                 </div>
 
@@ -133,7 +135,7 @@ const Contact = () => {
                                     type="submit"
                                     className='w-full py-3 px-6 rounded-lg font-medium transition-all duration-300 bg-yellow-400 hover:bg-yellow-500 text-gray-900 hover:scale-105'
                                 >
-                                    Send Message
+                                    {getTranslation('contact.sendMessage')}
                                 </button>
                             </form>
                         </div>

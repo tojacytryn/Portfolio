@@ -1,4 +1,8 @@
+import { useLanguage } from '../contexts/LanguageContext';
+
 const About = () => {
+    const { getTranslation } = useLanguage();
+
     const technologies = [
         { name: 'HTML', img: 'https://skillicons.dev/icons?i=html' },
         { name: 'CSS', img: 'https://skillicons.dev/icons?i=css' },
@@ -26,21 +30,19 @@ const About = () => {
             <div className="container mx-auto px-4 relative z-10">
                 <div className="max-w-6xl mx-auto">
                     <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-                        <span className="text-yellow-400">About</span> <span className="text-white">Me</span>
+                        <span className="text-yellow-400">{getTranslation('about.title').split(' ')[0]}</span> <span className="text-white">{getTranslation('about.title').split(' ')[1]}</span>
                     </h2>
 
                     <div className="bg-[#00152480] backdrop-blur-md rounded-2xl p-8 md:p-12 shadow-2xl border border-white/10">
                         <div className="text-center mb-12">
                             <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
-                                I'm a passionate young developer from Poland with a love for creating innovative web solutions.
-                                My journey in programming started with curiosity and has evolved into a dedicated pursuit of
-                                crafting beautiful, functional, and user-friendly applications.
+                                {getTranslation('about.description')}
                             </p>
                         </div>
 
                         <div className="mb-12">
                             <h3 className="text-2xl md:text-3xl font-bold text-yellow-400 mb-8 text-center">
-                                Technologies & Tools
+                                {getTranslation('about.technologies')}
                             </h3>
 
                             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6">
@@ -64,15 +66,15 @@ const About = () => {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             <div className="text-center p-6 bg-gradient-to-br from-yellow-400/10 to-yellow-600/10 rounded-xl border border-yellow-400/20">
                                 <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">16</div>
-                                <div className="text-gray-300">Years old</div>
+                                <div className="text-gray-300">{getTranslation('about.yearsOld')}</div>
                             </div>
                             <div className="text-center p-6 bg-gradient-to-br from-yellow-400/10 to-yellow-600/10 rounded-xl border border-yellow-400/20">
                                 <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">10+</div>
-                                <div className="text-gray-300">Projects</div>
+                                <div className="text-gray-300">{getTranslation('about.projects')}</div>
                             </div>
                             <div className="text-center p-6 bg-gradient-to-br from-yellow-400/10 to-yellow-600/10 rounded-xl border border-yellow-400/20">
                                 <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">∞</div>
-                                <div className="text-gray-300">Passion for programming</div>
+                                <div className="text-gray-300">{getTranslation('about.passion')}</div>
                             </div>
                         </div>
                     </div>

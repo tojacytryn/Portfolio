@@ -1,9 +1,13 @@
+import { useLanguage } from '../contexts/LanguageContext';
+
 const Projects = () => {
+    const { getTranslation } = useLanguage();
+
     const projects = [
         {
             id: 1,
             title: 'Portfolio',
-            description: '(This website) A personal portfolio showcasing my skills and projects, built with React and Tailwind CSS.',
+            descriptionKey: 'projects.portfolio.description',
             image: 'https://i.imgur.com/yfzJShq.png',
             technologies: ['React', 'Tailwind CSS', 'JavaScript'],
             demoUrl: '#',
@@ -12,7 +16,7 @@ const Projects = () => {
         {
             id: 2,
             title: 'TwitchTTS "Iᴠᴏɴᴋᴀ"',
-            description: 'A website that reads messages from Twitch chat with text-to-speech. Users can mute specific users and map their nicknames for better management.',
+            descriptionKey: 'projects.twitchtts.description',
             image: 'https://i.imgur.com/FIx1vu8.png',
             technologies: ['HTML', 'CSS', 'JavaScript', 'PHP'],
             demoUrl: 'https://cytryn.ovh/ivonka/',
@@ -21,7 +25,7 @@ const Projects = () => {
         {
             id: 3,
             title: 'Flagmask',
-            description: 'A lightweight CSS utility library that allows you to mask text and elements with country flags using simple CSS classes.',
+            descriptionKey: 'projects.flagmask.description',
             image: 'https://media.istockphoto.com/id/1190901810/vector/flags-of-the-world.jpg?s=612x612&w=0&k=20&c=Kmi90OlDY9BexGE4Hvkqcz1Eg6tD6q9nwiuxLwwcWFY=',
             technologies: ['CSS', 'npm'],
             demoUrl: 'https://github.com/tojacytryn/flagmask',
@@ -29,8 +33,8 @@ const Projects = () => {
         },
         {
             id: 4,
-            title: 'Snake Game',
-            description: 'A classic snake game implemented in C++ using Raylib.',
+            title: 'Snake',
+            descriptionKey: 'projects.snake.description',
             image: 'https://i.imgur.com/fGh1We9.png',
             technologies: ['C++', 'Raylib'],
             demoUrl: 'https://github.com/tojacytryn/CppSnake',
@@ -48,7 +52,7 @@ const Projects = () => {
             <div className="container mx-auto px-4 relative z-10">
                 <div className="max-w-7xl mx-auto">
                     <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-                        <span className="text-yellow-400">My</span> <span className="text-white">Projects</span>
+                        <span className="text-yellow-400">{getTranslation('projects.title').split(' ')[0]}</span> <span className="text-white">{getTranslation('projects.title').split(' ').slice(1).join(' ')}</span>
                     </h2>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -71,13 +75,13 @@ const Projects = () => {
                                             href={project.demoUrl}
                                             className="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-medium hover:bg-yellow-500 transition-colors duration-300 transform hover:scale-105"
                                         >
-                                            Live Demo
+                                            {getTranslation('projects.liveDemo')}
                                         </a>
                                         <a
                                             href={project.codeUrl}
                                             className="bg-white/20 text-white px-4 py-2 rounded-full font-medium hover:bg-white/30 transition-colors duration-300 transform hover:scale-105 backdrop-blur-sm"
                                         >
-                                            View Code
+                                            {getTranslation('projects.viewCode')}
                                         </a>
                                     </div>
                                 </div>
@@ -87,7 +91,7 @@ const Projects = () => {
                                         {project.title}
                                     </h3>
                                     <p className="text-gray-300 mb-4 leading-relaxed">
-                                        {project.description}
+                                        {getTranslation(project.descriptionKey)}
                                     </p>
 
                                     <div className="flex flex-wrap gap-2">
@@ -107,13 +111,13 @@ const Projects = () => {
 
                     <div className="text-center mt-16">
                         <p className="text-gray-300 text-lg mb-6">
-                            Want to see more projects or collaborate on something amazing?
+                            {getTranslation('projects.collaborate')}
                         </p>
                         <button
                             onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
                             className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold py-4 px-8 rounded-full hover:from-yellow-500 hover:to-yellow-600 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-yellow-400/25"
                         >
-                            Let's Work Together
+                            {getTranslation('projects.workTogether')}
                         </button>
                     </div>
                 </div>

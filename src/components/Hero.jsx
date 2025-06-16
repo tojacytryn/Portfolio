@@ -1,4 +1,8 @@
+import { useLanguage } from '../contexts/LanguageContext';
+
 const Hero = () => {
+    const { getTranslation } = useLanguage();
+
     return (
         <section id="home" className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
             <div className="absolute inset-0 opacity-10">
@@ -29,28 +33,27 @@ const Hero = () => {
                         <div className="flex flex-col md:flex-row items-center gap-4 text-4xl md:text-6xl font-bold">
                             <span className="hand text-5xl md:text-7xl">👋</span>
                             <div className="text-white">
-                                Hi, I'm <span className="text-yellow-400">Dawid</span>
+                                {getTranslation('hero.greeting')} <span className="text-yellow-400">Dawid</span>
                             </div>
                         </div>
 
                         <div className="text-white text-2xl md:text-4xl font-bold">
-                            A young developer from <span className="poland font-extrabold">Poland</span>
+                            {getTranslation('hero.description')} <span className="poland font-extrabold">{getTranslation('hero.country')}</span>
                         </div>
 
                         <p className="text-gray-300 text-lg md:text-xl max-w-2xl leading-relaxed mt-4">
-                            Passionate about creating modern web applications and learning new technologies.
-                            I love turning ideas into beautiful, functional digital experiences.
+                            {getTranslation('hero.subtitle')}
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-8">
                             <a href="#projects">
                                 <button className="bg-yellow-400 text-gray-900 hover:bg-yellow-500 font-bold py-4 px-8 rounded-full transition-all duration-300 hover:scale-105">
-                                    View My Work
+                                    {getTranslation('hero.viewWork')}
                                 </button>
                             </a>
                             <a href="#contact">
                                 <button className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-gray-900 font-bold py-4 px-8 rounded-full transition-all duration-300 hover:scale-105">
-                                    Get In Touch
+                                    {getTranslation('hero.getInTouch')}
                                 </button>
                             </a>
                         </div>
